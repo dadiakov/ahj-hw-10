@@ -20,6 +20,7 @@ export default class Message {
     this.coordsModal.addEventListener('submit', this.checkModal.bind(this));
     this.modalInput = this.element.querySelector('.modal-input');
     this.checkCoordsMessage = this.element.querySelector('.check-coords-input');
+    this.coordsModal.querySelector('.modal-cancel').addEventListener('click', this.closeModal.bind(this));
     this.loadData();
   }
 
@@ -69,11 +70,6 @@ export default class Message {
 
   checkModal(e) {
     e.preventDefault();
-    if (e.target.classList.contains('modal-cancel')) {
-      this.modalInput.value = '';
-      this.coordsModal.classList.add('hide');
-      return;
-    }
     if (!this.checkCoordsInput(this.modalInput.value)) {
       this.checkCoordsMessage.classList.remove('hide');
       return;
@@ -84,7 +80,13 @@ export default class Message {
     this.coordsModal.classList.add('hide');
   }
 
-  static checkCoordsInput(coords) {
+  closeModal(e) {
+    e.preventDefault();
+    this.modalInput.value = '';
+    this.coordsModal.classList.add('hide');
+  }
+
+  checkCoordsInput(coords) {
     return /^\[?\d{1,2}\.\d{1,5}\,\s?\-?\d{1,2}\.\d{1,5}\]?/.test(coords);
   }
 
