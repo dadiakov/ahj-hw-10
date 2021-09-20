@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AHJ-HW-10</title>
+</head>
+<body>
+    <div class='container'>
+      <div class='message-container'></div>
+      <form class='input-form'>
+        <div class='input-container'>
+          <input class='input-text' type="text" required>
+        </div>
+        <button class='input-submit hide'></button>
+      </form>
+      <div class='coords-modal hide'>
+        <div class='modal-content'>
+        <div class='modal-info'>
+          <p>Что-то пошло не так...</p>
+          <p>Введите координаты через запятую</p>
+          <p class='check-coords-input hide'>Пожалуйста, введите корректные данные</p>
+        </div>
+        <form class='modal-form'>
+          <input class='modal-input' type="text" required>
+          <div class='modal-buttons'>
+            <button class='modal-btn modal-cancel'>Отмена</button>
+            <button class='modal-btn modal-ok'>Ок</button>
+          </div>
+        </form>
+      </div>
+      </div>
+    </div>
+</body>
+</html>
