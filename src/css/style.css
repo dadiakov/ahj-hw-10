@@ -5,23 +5,27 @@
 
 .container {
   width: 600px;
-  border: 1px solid black;
   min-height: 600px;
   padding: 25px;
+  border: 10px solid lightgrey;
+  border-radius: 20px;
+  background: url(../img/back.png);
+  background-size: 100%;
 }
 
 .message-container {
   width: 100%;
-  border: 1px solid black;
   min-height: 400px;
   padding: 25px;
 }
 
 .input-text {
   width: 100%;
-  height: 25px;
+  height: 35px;
+  margin-top: 20px;
   padding: 10px;
   padding-right: 80px;
+  font: inherit;
 }
 
 .message-item {
@@ -31,6 +35,7 @@
   padding-right: 25%;
   border: 1px solid black;
   border-radius: 10px;
+  background-color: white;
 }
 
 .message-content {
