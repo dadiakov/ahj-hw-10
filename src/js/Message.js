@@ -87,7 +87,7 @@ export default class Message {
   }
 
   checkCoordsInput(coords) {
-    return /^\[?\d{1,2}\.\d{1,5}\,\s?\-?\d{1,2}\.\d{1,5}\]?/.test(coords);
+    return /^\[?\-?\d{1,2}\.\d{1,5}\,\s?\-?\d{1,2}\.\d{1,5}\]?/.test(coords);
   }
 
   saveData() {
